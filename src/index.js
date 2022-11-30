@@ -22,7 +22,7 @@ app.use(session({
     saveUninitialized:false,
 }))
 
-mongoose.connect("mongodb+srv://Uranium-Batch:aruSjkdGdfhc9MRK@functionup.eel5r.mongodb.net/digi"
+mongoose.connect("mongodb+srv://Uranium-Batch:aruSjkdGdfhc9MRK@functionup.eel5r.mongodb.net/dharamDigital"
 , {
     useNewUrlParser: true
 })
