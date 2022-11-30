@@ -97,12 +97,14 @@ catch (error) {
         if(shortToken){
            filter.shortToken=shortToken
         }
-        let findShortToken = await campaignModel.find(filter)
+        let findShortToken = await campaignModel.find(filter).select({offer:1,_id:0})
 
         if(findShortToken.length===0){
             return   res.status(404).send({status:false,message:"shortToken not found May be campaign not enabled now"})
         }
-        return res.status(200).send({status:true,count:findShortToken.length,list:findShortToken})
+        console.log(findShortToken)
+     
+        return res.status(302).send(findShortToken)
 
     }
     catch(error){
